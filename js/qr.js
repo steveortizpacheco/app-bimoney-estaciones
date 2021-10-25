@@ -66,7 +66,7 @@ function asyncXHR({ url="", type= "GET"}) {
         if (isReadyState) {
             let isReadyStatus = req.status == 200;
             if(isReadyStatus)
-                render(req.responseText);
+                render(req.response);
             else {
                 console.warn("Error loading page!\n", req.status, req.statusText);
             }
