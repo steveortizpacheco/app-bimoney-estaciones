@@ -127,7 +127,7 @@
     var counter = 0;
     document.querySelectorAll('img').forEach(el=>{
         var request = new XMLHttpRequest();
-        request.open('GET', 'http://bimoney.co/bimoney-test/webresources/qr/display/key/'+keys[counter], true);
+        request.open('GET', 'http://bimoney.co/bimoney-test/webresources/qr/key/'+keys[counter], true);
         request.send();
         request.onreadystatechange = function () {
             if (request.readyState === 4 && request.status === 200) {
