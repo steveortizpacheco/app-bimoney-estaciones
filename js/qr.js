@@ -59,8 +59,8 @@ function asyncXHR({ url="", type= "GET"}) {
         console.log(url);
         return false;
     }
-    req.open(type, url, true);
     req.setRequestHeader('Access-Control-Allow-Origin', '*');
+    req.open(type, url, true);
     req.onreadystatechange = function (aEvt) {
         let isReadyState = req.readyState == 4;
         if (isReadyState) {
